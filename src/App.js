@@ -23,7 +23,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-  location: PropTypes.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 export default withRouter(hot(module)(App));
