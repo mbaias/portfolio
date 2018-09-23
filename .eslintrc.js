@@ -1,6 +1,7 @@
 module.exports = {  
   extends: ["airbnb", "prettier", "prettier/react"],
   plugins: ["react", "prettier"],
+  parser: "babel-eslint",
   env: {
     es6: true,
     jest: true,
@@ -25,5 +26,9 @@ module.exports = {
         "allowTemplateLiterals": true
       }
     ],
+    "react/prefer-stateless-function": 0,
+    "no-unused-vars": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0
   }
 };

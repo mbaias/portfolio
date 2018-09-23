@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
+import { Route, withRouter } from 'react-router-dom';
+import posed from 'react-pose';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: 'Hello World',
-    };
-  }
-
   render() {
-    const { title } = this.state;
     return (
-      <div>
-        <h1>{title}</h1>
+      <div className="wrapper">
+        <div className="background">
+          <div className="background__overlay" />
+        </div>
+        <div className="main-content-wrapper" />
+        <div className="secondary-content-wrapper" />
       </div>
     );
   }
 }
 
-export default hot(module)(App);
+export default withRouter(hot(module)(App));

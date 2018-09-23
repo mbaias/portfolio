@@ -56,10 +56,12 @@
   },
   "dependencies": {
     "history": "^4.7.2",
+    "popmotion": "^8.4.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-hot-loader": "^4.3.11",
+    "react-pose": "^3.3.4",
     "react-router-dom": "^4.3.1"
   }
 }
