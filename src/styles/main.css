@@ -10,6 +10,7 @@
   --primary-color-1-variant: #2c3541;
   --primary-color-2: #fff;
   --primary-color-2-variant: #d9d9da;
+  --fontFamily: "Montserrat", sans-serif;
 }
 
 * {
@@ -21,6 +22,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+  font-family: var(--fontFamily);
 }
 
 #root {
@@ -62,15 +64,23 @@ body {
 
 .background:hover .background__overlay {
   transform: translateX(-40%);
-  trnsition: 0.3s;
+  transition: 0.3s;
 }
 
 .main-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 30%;
   height: 100%;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 20;
 }
 
 .secondary-content-wrapper {
   width: 70%;
   height: 100%;
+  position: relative;
+  z-index: 10;
 }
