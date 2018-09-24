@@ -4,6 +4,7 @@ import { hot } from 'react-hot-loader';
 import { Route, withRouter } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
+import PageCounter from './PageCounter';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
           <Navbar path={path} />
         </div>
         <div className="secondary-content-wrapper">
+          <PageCounter path={path} />
           <Route path="/about" render={() => <h1>Hell</h1>} />
         </div>
       </div>

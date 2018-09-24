@@ -6473,6 +6473,12 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
+react-pose-text@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-pose-text/-/react-pose-text-3.1.0.tgz#625471d503a56773715dc6ad79a5f7ef86f2a0ec"
+  dependencies:
+    hey-listen "^1.0.5"
+
 react-pose@^3.3.4:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-3.3.4.tgz#7aac93ba09163ed018f1e538d0075c3a2ac65479"

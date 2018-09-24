@@ -32,6 +32,7 @@ module.exports = {
     "jsx-a11y/no-static-element-interactions": 0,
     "react/destructuring-assignment": 0,
     "react/forbid-prop-types": 0,
-    "jsx-a11y/mouse-events-have-key-events": 0
+    "jsx-a11y/mouse-events-have-key-events": 0,
+    "consistent-return": 0
   }
 };
