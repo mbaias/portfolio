@@ -1,0 +1,89 @@
+.header {
+  font-size: calc(8px + 2 * ((100vw - 320px) / 680));
+  position: fixed;
+  transition: all 1s;
+}
+
+.header--moved {
+  position: fixed;
+  font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+  transform: translate(-30%, -50%);
+  transition: all 1s;
+}
+
+.person__name {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 0 5px;
+  /* white-space: nowrap; */
+  letter-spacing: 4px;
+}
+
+.person__name__text {
+  padding: 0 15px;
+  color: rgba(255, 255, 255, 90%);
+  background: rgb(124, 123, 123);
+  animation: nameDisplay 0.1s 0.6s ease-out forwards;
+  visibility: hidden;
+}
+
+.person__job-title {
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+  color: var(--primary-color-2-variant);
+  letter-spacing: 2px;
+}
+
+.person__job-title__text {
+  animation: nameDisplay 0.1s 0.6s ease-out forwards;
+  visibility: hidden;
+}
+
+.person-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  animation: personOverlay 1s ease-in-out;
+}
+
+.person-overlay--delayed {
+  animation: personOverlay 1s 0.2s ease-in-out;
+}
+
+.colored {
+  color: var(--primary-color-1);
+}
+
+@keyframes nameDisplay {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes personOverlay {
+  0% {
+    left: 0;
+    right: auto;
+    width: 0;
+  }
+  45% {
+    width: 100%;
+  }
+  50% {
+    width: 100%;
+  }
+  75% {
+    width: 100%;
+  }
+  100% {
+    left: initial;
+    right: 0;
+    width: 0;
+  }
+}

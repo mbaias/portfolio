@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { hot } from 'react-hot-loader';
 import { Route, withRouter } from 'react-router-dom';
-import posed from 'react-pose';
 import Navbar from './components/Navbar/Navbar';
+import Header from './components/Header/Header';
 
 class App extends Component {
   render() {
@@ -11,12 +11,21 @@ class App extends Component {
     return (
       <div className="wrapper">
         <div className="background">
-          <div className="background__overlay" />
+          <div
+            className={
+              path === '/'
+                ? 'background__overlay'
+                : 'background__overlay background__overlay--moved'
+            }
+          />
         </div>
-        <div className="main-content-wrapper">
+        <div className="page-side-content">
+          <Header path={path} />
           <Navbar path={path} />
         </div>
-        <div className="secondary-content-wrapper" />
+        <div className="secondary-content-wrapper">
+          <Route path="/about" render={() => <h1>Hell</h1>} />
+        </div>
       </div>
     );
   }

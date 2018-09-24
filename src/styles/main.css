@@ -59,21 +59,20 @@ body {
   );
   z-index: 1;
   transform: translateX(0);
-  transition: 0.3s;
+  transition: 1s;
 }
 
-.background:hover .background__overlay {
+.background__overlay--moved {
   transform: translateX(-40%);
-  transition: 0.3s;
+  transition: 1s;
 }
 
-.main-content-wrapper {
+.page-side-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 30%;
   height: 100%;
-  padding-bottom: 30px;
+  padding: 40px 0 30px 30px;
   position: relative;
   z-index: 20;
 }

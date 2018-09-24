@@ -1,26 +1,50 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import posed from 'react-pose';
 import '../../styles/navbar.css';
+
+const Nav = posed.nav({
+  origin: {
+    top: 'calc(100% - 30px)',
+    right: 'calc(100% - 30px)',
+    flip: true,
+    transition: {
+      duration: 1000,
+    },
+  },
+  moved: {
+    top: '50%',
+    right: '-100%',
+    flip: true,
+    transition: {
+      duration: 1000,
+    },
+  },
+});
 
 const Navbar = ({ path }) => {
   const navClass = path !== '/' ? 'nav' : 'nav nav--moved';
+
   const navbarLinkClass =
     path !== '/' ? 'navbar__link' : 'navbar__link navbar__link--primary-1';
+
   const activeNavbarLinkClass = path !== '/' ? 'active' : 'active--primary-1';
+
   const navbarCounterClass =
     path !== '/'
       ? 'navbar__counter'
       : 'navbar__counter navbar__counter--primary-1';
 
   return (
-    <nav className={navClass}>
+    <Nav pose={path === '/' ? 'moved' : 'origin'} className={navClass}>
       <ul className="navbar">
         <li className="navbar__item">
           <span className={navbarCounterClass}>01</span>
           <NavLink
             activeClassName={activeNavbarLinkClass}
             className={navbarLinkClass}
+            exact
             to="/"
           >
             Home
@@ -45,7 +69,7 @@ const Navbar = ({ path }) => {
           </NavLink>
         </li>
       </ul>
-    </nav>
+    </Nav>
   );
 };
 
