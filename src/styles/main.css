@@ -25,6 +25,11 @@ body {
   font-family: var(--fontFamily);
 }
 
+a:focus,
+a:active {
+  outline: none;
+}
+
 #root {
   width: 100%;
   height: 100%;

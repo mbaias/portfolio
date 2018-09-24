@@ -36,19 +36,22 @@
 }
 
 .navbar__link:after {
-  content: " ";
+  content: "";
   display: block;
-  width: 100%;
-  transform: scaleX(0);
+  position: absolute;
+  width: 0;
+  left: 0;
   height: 2px;
   background: var(--primary-color-2);
   margin-top: 5px;
-  transition: 0.3s;
+}
+
+.navbar__link.hoverOff:after {
+  animation: linkUnderlineOut 0.2s ease-in-out;
 }
 
 .navbar__link:hover:after {
-  transform: scaleX(1);
-  transition: 0.3s;
+  animation: linkUnderline 0.8s ease-in-out forwards;
 }
 
 .navbar__link--primary-1 {
@@ -71,6 +74,11 @@
   transition: 0.3s;
 }
 
+.navbar__link.active.hoverOff:after,
+.navbar__link.active--primary-1.hoverOff:after {
+  animation: none;
+}
+
 .navbar__link.active--primary-1:after {
   content: " ";
   display: block;
@@ -91,4 +99,54 @@
 .navbar__counter--primary-1 {
   color: var(--primary-color-1);
   transition: 1.6s;
+}
+
+/* Animations */
+
+@keyframes linkUnderline {
+  0% {
+    left: 0;
+    right: auto;
+    width: 0;
+  }
+
+  25% {
+    width: 100%;
+  }
+
+  50% {
+    left: auto;
+    right: 0;
+    width: 0%;
+  }
+
+  70% {
+    left: 0;
+    right: auto;
+    width: 0%;
+  }
+
+  100% {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+@keyframes linkUnderlineOut {
+  0% {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    left: auto;
+    right: 0;
+    width: 0;
+  }
 }

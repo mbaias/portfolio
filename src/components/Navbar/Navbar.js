@@ -24,6 +24,10 @@ const Nav = posed.nav({
 });
 
 const Navbar = ({ path }) => {
+  const animateLinkOnHoverOff = e => {
+    e.target.classList.add('hoverOff');
+  };
+
   const navClass = path !== '/' ? 'nav' : 'nav nav--moved';
 
   const navbarLinkClass =
@@ -42,6 +46,7 @@ const Navbar = ({ path }) => {
         <li className="navbar__item">
           <span className={navbarCounterClass}>01</span>
           <NavLink
+            onMouseOut={animateLinkOnHoverOff}
             activeClassName={activeNavbarLinkClass}
             className={navbarLinkClass}
             exact
@@ -52,19 +57,31 @@ const Navbar = ({ path }) => {
         </li>
         <li className="navbar__item">
           <span className={navbarCounterClass}>02</span>
-          <NavLink className={navbarLinkClass} to="/about">
+          <NavLink
+            onMouseOut={animateLinkOnHoverOff}
+            className={navbarLinkClass}
+            to="/about"
+          >
             About
           </NavLink>
         </li>
         <li className="navbar__item">
           <span className={navbarCounterClass}>03</span>
-          <NavLink className={navbarLinkClass} to="/portfolio">
+          <NavLink
+            onMouseOut={animateLinkOnHoverOff}
+            className={navbarLinkClass}
+            to="/portfolio"
+          >
             Portfolio
           </NavLink>
         </li>
         <li className="navbar__item">
           <span className={navbarCounterClass}>04</span>
-          <NavLink className={navbarLinkClass} to="/contacts">
+          <NavLink
+            onMouseOut={animateLinkOnHoverOff}
+            className={navbarLinkClass}
+            to="/contacts"
+          >
             Contacts
           </NavLink>
         </li>
