@@ -6,16 +6,16 @@ import '../../styles/navbar.css';
 
 const Nav = posed.nav({
   origin: {
-    top: 'calc(100% - 30px)',
-    right: 'calc(100% - 30px)',
+    bottom: '30px',
+    left: '30px',
     flip: true,
     transition: {
       duration: 1000,
     },
   },
   moved: {
-    top: '50%',
-    right: '-100%',
+    bottom: '25%',
+    left: '65%',
     flip: true,
     transition: {
       duration: 1000,

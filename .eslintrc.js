@@ -33,6 +33,7 @@ module.exports = {
     "react/destructuring-assignment": 0,
     "react/forbid-prop-types": 0,
     "jsx-a11y/mouse-events-have-key-events": 0,
-    "consistent-return": 0
+    "consistent-return": 0,
+    "react/no-array-index-key": 0
   }
 };

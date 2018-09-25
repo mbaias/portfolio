@@ -5,6 +5,7 @@ import { Route, withRouter } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
 import PageCounter from './PageCounter';
+import About from './components/About/About';
 
 class App extends Component {
   render() {
@@ -24,10 +25,10 @@ class App extends Component {
           <Header path={path} />
           <Navbar path={path} />
         </div>
-        <div className="secondary-content-wrapper">
+        <main className="secondary-content-wrapper">
           <PageCounter path={path} />
-          <Route path="/about" render={() => <h1>Hell</h1>} />
-        </div>
+          <Route path="/about" component={About} />
+        </main>
       </div>
     );
   }
