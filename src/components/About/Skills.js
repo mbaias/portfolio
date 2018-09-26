@@ -10,7 +10,7 @@ const Circle = posed.circle({
     strokeDashoffset: ({ progressValue }) => progressValue,
     transition: ({ i }) => ({
       duration: 600,
-      delay: i * 30,
+      delay: (i + 50) * 30,
     }),
   },
 });
@@ -23,30 +23,40 @@ const Skill = ({ skill, i }) => {
     <React.Fragment>
       <div className="skill">
         <svg className="skill__progress" width="50" height="50">
-          <circle
-            cx="25"
-            cy="25"
-            r="20"
-            stroke="rgba(14, 19, 25, 0.3)"
-            fill="none"
-            strokeWidth="6"
-          />
-          <Circle
-            initialPose="init"
-            pose="origin"
-            key={i}
-            cx="25"
-            cy="25"
-            r="20"
-            stroke="#0E1319"
-            fill="none"
-            strokeWidth="6"
-            strokeDasharray="125.6"
-            transform="rotate(-90 25 25)"
-            poseKey={progressValue}
-            i={i}
-            progressValue={progressValue}
-          />
+          <g>
+            <circle
+              cx="25"
+              cy="25"
+              r="20"
+              stroke="rgba(14, 19, 25, 0.3)"
+              fill="none"
+              strokeWidth="6"
+            />
+            <text
+              x="50%"
+              y="50%"
+              textAnchor="middle"
+              dominantBaseline="central"
+            >
+              {progress}
+            </text>
+            <Circle
+              initialPose="init"
+              pose="origin"
+              key={i}
+              cx="25"
+              cy="25"
+              r="20"
+              stroke="rgba(14, 19, 25, 0.6)"
+              fill="none"
+              strokeWidth="6"
+              strokeDasharray="125.6"
+              transform="rotate(-90 25 25)"
+              poseKey={progressValue}
+              i={i}
+              progressValue={progressValue}
+            />
+          </g>
         </svg>
         <span className="skill__name">{skill.name}</span>
       </div>

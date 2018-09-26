@@ -84,8 +84,13 @@ a:active {
 
 .secondary-content-wrapper {
   width: 70%;
-  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
   padding: 30px;
   position: relative;
   z-index: 10;
+}
+
+.routes-container {
+  padding: 1px;
 }

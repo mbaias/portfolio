@@ -1,6 +1,54 @@
 import React, { Component } from 'react';
+import posed from 'react-pose';
 import Skills from './Skills';
 import '../../styles/About.css';
+
+const Article = posed.div({
+  enter: { staggerChildren: 40 },
+  exit: { staggerChildren: 20 },
+});
+
+const H3 = posed.div({
+  enter: {
+    x: '0%',
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 40,
+    },
+  },
+  exit: {
+    x: '100%',
+    opacity: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 40,
+    },
+  },
+});
+
+const SkillContaner = posed.div({
+  enter: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 40,
+    },
+  },
+  exit: {
+    x: 500,
+    opacity: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 40,
+    },
+  },
+});
 
 class About extends Component {
   constructor(props) {
@@ -79,26 +127,38 @@ class About extends Component {
             numquam perspiciatis amet voluptate eum ab.
           </p>
         </section>
-        <article className="skills">
+        <Article className="skills">
           <section className="skills-column">
-            <h3 className="skills-column__header">Front End</h3>
+            <H3 className="skills-column__header--animated">
+              <h3 className="skills-column__header">Front End</h3>
+            </H3>
             {frontEnd.map((skill, i) => (
-              <Skills key={i} skill={skill} i={i} />
+              <SkillContaner key={i} i={i}>
+                <Skills skill={skill} i={i} />
+              </SkillContaner>
             ))}
           </section>
           <section className="skills-column">
-            <h3 className="skills-column__header">Back End</h3>
+            <H3 className="skills-column__header--animated">
+              <h3 className="skills-column__header">Back End</h3>
+            </H3>
             {backEnd.map((skill, i) => (
-              <Skills key={i} skill={skill} i={i} />
+              <SkillContaner key={i} i={i}>
+                <Skills skill={skill} i={i} />
+              </SkillContaner>
             ))}
           </section>
           <section className="skills-column">
-            <h3 className="skills-column__header">Other</h3>
+            <H3 className="skills-column__header--animated">
+              <h3 className="skills-column__header">Other</h3>
+            </H3>
             {other.map((skill, i) => (
-              <Skills key={i} skill={skill} i={i} />
+              <SkillContaner key={i} i={i}>
+                <Skills skill={skill} i={i} />
+              </SkillContaner>
             ))}
           </section>
-        </article>
+        </Article>
       </div>
     );
   }
