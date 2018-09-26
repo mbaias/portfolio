@@ -12,6 +12,7 @@ const Nav = posed.nav({
     transition: {
       duration: 1000,
     },
+    delay: 200,
   },
   moved: {
     bottom: '25%',
@@ -19,6 +20,7 @@ const Nav = posed.nav({
     flip: true,
     transition: {
       duration: 1000,
+      delay: 200,
     },
   },
 });

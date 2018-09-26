@@ -3,14 +3,14 @@ import posed from 'react-pose';
 import Skills from './Skills';
 import '../../styles/about.css';
 
-const Article = posed.div({
-  enter: { staggerChildren: 40 },
-  exit: { staggerChildren: 20 },
-});
-
 const Section = posed.div({
   enter: { x: '0%', opacity: 1 },
   exit: { x: '100%', opacity: 0 },
+});
+
+const Article = posed.div({
+  enter: { staggerChildren: 40 },
+  exit: { staggerChildren: 20 },
 });
 
 const H3 = posed.div({
@@ -21,6 +21,7 @@ const H3 = posed.div({
       type: 'spring',
       stiffness: 100,
       damping: 40,
+      delay: 200,
     },
   },
   exit: {
@@ -30,6 +31,7 @@ const H3 = posed.div({
       type: 'spring',
       stiffness: 100,
       damping: 40,
+      delay: 200,
     },
   },
 });
