@@ -21,33 +21,40 @@ const RoutesContainer = posed.div({
   },
 });
 
-const BackgroundOverlay = posed.div({
-  overlay: {
-    x: ({ path }) =>
-      // eslint-disable-next-line
-      path === '/portfolio' ? '0%' : path === '/' ? '-50%' : '-80%',
-    duration: 10000,
-    transition: {
-      type: 'spring',
-      stiffness: 300,
-      damping: 40,
-      duration: 2000,
-    },
-  },
-});
+// const BackgroundOverlay = posed.div({
+//   overlay: {
+//     x: ({ path }) =>
+//       // eslint-disable-next-line
+//       path === '/portfolio' ? '0%' : path === '/' ? '-50%' : '-80%',
+//     transition: {
+//       type: 'spring',
+//       stiffness: 300,
+//       damping: 40,
+//       duration: 1000,
+//     },
+//   },
+// });
 
 class App extends Component {
   render() {
     const { location } = this.props;
     const { pathname: path, key } = location;
+
+    const backgroundOverlayClass =
+      // eslint-disable-next-line
+      path === '/'
+        ? 'background__overlay'
+        : path === '/portfolio'
+          ? 'background__overlay background__overlay--fluid'
+          : 'background__overlay background__overlay--partial';
     return (
       <div className="wrapper">
         <div className="background">
-          <BackgroundOverlay
-            pose="overlay"
-            poseKey={path}
-            path={path}
-            className="background__overlay"
+          <div
+            // pose="overlay"
+            // poseKey={path}
+            // path={path}
+            className={backgroundOverlayClass}
           />
         </div>
         <div className="page-side-content">

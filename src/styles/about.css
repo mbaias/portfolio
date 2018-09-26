@@ -1,6 +1,8 @@
 .about-wrapper {
   width: 80%;
   margin: 20px auto 0;
+  padding: 30px;
+  overflow-x: hidden;
 }
 
 .person-info {
@@ -25,7 +27,7 @@
 }
 
 .person-info__profile {
-  width: 60%;
+  width: 80%;
   color: #2a323dda;
   text-align: left;
   position: relative;

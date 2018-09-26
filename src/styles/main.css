@@ -63,6 +63,16 @@ a:active {
     var(--primary-color-1-variant)
   );
   z-index: 1;
+  transform: translateX(-50%);
+  transition: transform 1s ease-out;
+}
+
+.background__overlay--fluid {
+  transform: translateX(0%);
+}
+
+.background__overlay--partial {
+  transform: translateX(-80%);
 }
 
 .page-side-content {
@@ -78,7 +88,6 @@ a:active {
 .secondary-content-wrapper {
   width: 80%;
   min-height: 100%;
-  overflow-x: hidden;
   /* padding: 30px; */
   position: relative;
   z-index: 10;
