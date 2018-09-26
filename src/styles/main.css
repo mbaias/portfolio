@@ -55,7 +55,7 @@ a:active {
 }
 
 .background__overlay {
-  width: 50%;
+  width: 100%;
   height: 100%;
   background: linear-gradient(
     to right,
@@ -64,18 +64,12 @@ a:active {
   );
   z-index: 1;
   transform: translateX(0);
-  transition: 1s;
-}
-
-.background__overlay--moved {
-  transform: translateX(-40%);
-  transition: 1s;
 }
 
 .page-side-content {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 20%;
   min-height: 100vh;
   padding: 40px 0 30px 30px;
   position: relative;
@@ -83,14 +77,16 @@ a:active {
 }
 
 .secondary-content-wrapper {
-  width: 70%;
+  width: 80%;
   min-height: 100%;
   overflow-x: hidden;
-  padding: 30px;
+  /* padding: 30px; */
   position: relative;
   z-index: 10;
 }
 
 .routes-container {
-  padding: 1px;
+  display: flex;
+  height: 100%;
+  /* padding: 1px; */
 }

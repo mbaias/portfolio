@@ -9,6 +9,11 @@
   font-size: 0.9rem;
 }
 
+.page-counter--colored {
+  color: var(--primary-color-2);
+  transition: 2s;
+}
+
 .page-counter__current {
   margin-bottom: 15px;
 }
@@ -25,4 +30,9 @@
   position: absolute;
   height: 3px;
   background: var(--primary-color-1);
+}
+
+.page-counter__progress__overlay--colored {
+  background: var(--primary-color-2);
+  transition: 2s;
 }

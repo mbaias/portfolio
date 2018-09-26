@@ -8,6 +8,7 @@ import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
 import PageCounter from './PageCounter';
 import About from './components/About/About';
+import Portfolio from './components/Portfolio/Portfolio';
 
 const RoutesContainer = posed.div({
   enter: {
@@ -20,6 +21,17 @@ const RoutesContainer = posed.div({
   },
 });
 
+const BackgroundOverlay = posed.div({
+  overlay: {
+    x: ({ path }) =>
+      // eslint-disable-next-line
+      path === '/portfolio' ? '0%' : path === '/' ? '-50%' : '-80%',
+    transition: {
+      duration: 1000,
+    },
+  },
+});
+
 class App extends Component {
   render() {
     const { location } = this.props;
@@ -27,12 +39,11 @@ class App extends Component {
     return (
       <div className="wrapper">
         <div className="background">
-          <div
-            className={
-              path === '/'
-                ? 'background__overlay'
-                : 'background__overlay background__overlay--moved'
-            }
+          <BackgroundOverlay
+            pose="overlay"
+            poseKey={path}
+            path={path}
+            className="background__overlay"
           />
         </div>
         <div className="page-side-content">
@@ -45,6 +56,7 @@ class App extends Component {
             <RoutesContainer className="routes-container" key={key}>
               <Switch location={location}>
                 <Route exact path="/about" component={About} />
+                <Route exact path="/portfolio" component={Portfolio} />
               </Switch>
             </RoutesContainer>
           </PoseGroup>

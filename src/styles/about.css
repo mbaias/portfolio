@@ -25,6 +25,7 @@
 }
 
 .person-info__profile {
+  width: 60%;
   color: #2a323dda;
   text-align: left;
   position: relative;

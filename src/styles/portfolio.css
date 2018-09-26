@@ -1,0 +1,150 @@
+.portfolio-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+}
+
+.box {
+  position: relative;
+  font-size: 5em;
+  font-family: "Monoton", cursive;
+  letter-spacing: 10px;
+  color: #ff00de;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+.box:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  filter: blur(60px);
+}
+
+.blink {
+  animation: blink 3s ease-in-out 0s infinite;
+}
+
+.blink1 {
+  animation: blink1 2s ease-in-out 0.5s infinite alternate;
+}
+
+.blink2 {
+  animation: blink 5s ease-in-out 0.9s infinite;
+}
+
+.off {
+  opacity: 0.8;
+  animation: off 3s ease-in-out forwards 2s 1;
+}
+/*смещение вправо последних 4 букв*/
+/* .r {
+  position: absolute;
+  left: 100px;
+} */
+/*мигание j и o*/
+@keyframes blink {
+  19.999%,
+  22%,
+  33%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.2;
+  }
+  0%,
+  12%,
+  18.999%,
+  31.999%,
+  37%,
+  40%,
+  44.999%,
+  46%,
+  49.999%,
+  51%,
+  58.999%,
+  61%,
+  71%,
+  85.999%,
+  96%,
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes blink1 {
+  0%,
+  15.999%,
+  61%,
+  85.999%,
+  95% {
+    opacity: 0.3;
+  }
+  16%,
+  19%,
+  60.999%,
+  86%,
+  93%,
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes off {
+  0%,
+  15.999%,
+  61%,
+  85.999%,
+  95% {
+    opacity: 1;
+  }
+  16%,
+  19%,
+  60.999%,
+  86%,
+  93%,
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de,
+      0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de,
+      0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+
+@keyframes neon3 {
+  0%,
+  15.999%,
+  61%,
+  85.999%,
+  95% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de,
+      0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    border: 5px solid #ff00de;
+  }
+  16%,
+  19%,
+  60.999%,
+  86%,
+  93%,
+  100% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #004da0,
+      0 0 35px #004da0, 0 0 40px #004da0, 0 0 50px #004da0, 0 0 75px #004da0;
+    border: 5px solid #004da0;
+  }
+}

@@ -62,16 +62,26 @@ export default class PageCounter extends Component {
     const { path } = this.props;
     const { total, pages } = this.state;
     const progress = `${(pages[path] / total) * 100}%`;
+
+    const pageCounterClass =
+      path === '/portfolio'
+        ? 'page-counter page-counter--colored'
+        : 'page-counter';
+
+    const pageCounterProgressClass =
+      path === '/portfolio'
+        ? 'page-counter__progress__overlay page-counter__progress__overlay--colored'
+        : 'page-counter__progress__overlay';
     return (
       <React.Fragment>
-        <div className="page-counter">
+        <div className={pageCounterClass}>
           <PoseGroup>{this.iterateOverTotal()}</PoseGroup>
           <div className="page-counter__progress">
             <ProgressOverlay
               pose="init"
               poseKey={progress}
               progress={progress}
-              className="page-counter__progress__overlay"
+              className={pageCounterProgressClass}
             />
           </div>
           <div className="page-counter__total">{total}</div>

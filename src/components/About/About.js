@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import posed from 'react-pose';
 import Skills from './Skills';
-import '../../styles/About.css';
+import '../../styles/about.css';
 
 const Article = posed.div({
   enter: { staggerChildren: 40 },
