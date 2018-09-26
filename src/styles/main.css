@@ -63,7 +63,6 @@ a:active {
     var(--primary-color-1-variant)
   );
   z-index: 1;
-  transform: translateX(0);
 }
 
 .page-side-content {
@@ -88,5 +87,4 @@ a:active {
 .routes-container {
   display: flex;
   height: 100%;
-  /* padding: 1px; */
 }

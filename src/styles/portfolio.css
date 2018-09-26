@@ -43,12 +43,7 @@
   opacity: 0.8;
   animation: off 3s ease-in-out forwards 2s 1;
 }
-/*смещение вправо последних 4 букв*/
-/* .r {
-  position: absolute;
-  left: 100px;
-} */
-/*мигание j и o*/
+
 @keyframes blink {
   19.999%,
   22%,

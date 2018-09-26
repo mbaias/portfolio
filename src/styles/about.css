@@ -95,12 +95,10 @@
 .skills-column__header:hover:before {
   height: 100%;
   width: 5px;
-  transition: width 0.4s;
 }
 
 .skills-column__header:hover {
   padding-left: 20px;
-  transition: 0.4s;
   color: color-mod(#2c3541 alpha(80%));
 }
 

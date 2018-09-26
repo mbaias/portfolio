@@ -26,8 +26,12 @@ const BackgroundOverlay = posed.div({
     x: ({ path }) =>
       // eslint-disable-next-line
       path === '/portfolio' ? '0%' : path === '/' ? '-50%' : '-80%',
+    duration: 10000,
     transition: {
-      duration: 1000,
+      type: 'spring',
+      stiffness: 300,
+      damping: 40,
+      duration: 2000,
     },
   },
 });

@@ -8,14 +8,12 @@
   position: fixed;
   font-size: calc(14px + 6 * ((100vw - 320px) / 680));
   transform: translate(-30%, -50%);
-  transition: all 1s;
 }
 
 .person__name {
   position: relative;
   margin-bottom: 10px;
   padding: 0 5px;
-  /* white-space: nowrap; */
   letter-spacing: 4px;
 }
 
