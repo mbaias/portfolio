@@ -9,8 +9,8 @@ const Circle = posed.circle({
   origin: {
     strokeDashoffset: ({ progressValue }) => progressValue,
     transition: ({ i }) => ({
-      duration: 600,
-      delay: (i + 50) * 30,
+      duration: 500,
+      delay: i * 100 + 1400,
     }),
   },
 });
