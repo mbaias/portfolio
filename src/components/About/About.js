@@ -8,6 +8,11 @@ const Article = posed.div({
   exit: { staggerChildren: 20 },
 });
 
+const Section = posed.div({
+  enter: { x: '0%', opacity: 1 },
+  exit: { x: '100%', opacity: 0 },
+});
+
 const H3 = posed.div({
   enter: {
     x: '0%',
@@ -114,7 +119,7 @@ class About extends Component {
     const { frontEnd, backEnd, other } = this.state.skills;
     return (
       <div className="about-wrapper">
-        <section className="person-info">
+        <Section className="person-info">
           <h1 className="person-info__name">Baias Mametjanov</h1>
           <span className="person-info__details">21, Front-End Developer</span>
           <p className="person-info__profile">
@@ -126,7 +131,7 @@ class About extends Component {
             autem, veniam ullam. Quia ipsa dicta illum, natus, iure voluptatibus
             numquam perspiciatis amet voluptate eum ab.
           </p>
-        </section>
+        </Section>
         <Article className="skills">
           <section className="skills-column">
             <H3 className="skills-column__header--animated">

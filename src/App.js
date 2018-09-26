@@ -12,12 +12,10 @@ import About from './components/About/About';
 const RoutesContainer = posed.div({
   enter: {
     opacity: 1,
-    x: 0,
     delay: 300,
     beforeChildren: true,
   },
   exit: {
-    x: 50,
     opacity: 0,
   },
 });
