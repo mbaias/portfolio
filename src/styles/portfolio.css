@@ -9,6 +9,7 @@
 .neon {
   border: 5px solid #7f00ef;
   padding: 30px 60px;
+  width: 60%;
   animation: neon3 4s 2s ease-in-out infinite alternate-reverse;
 }
 
@@ -18,7 +19,7 @@
   font-family: "Monoton", cursive;
   letter-spacing: 10px;
   color: #7f00ef;
-  animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 4s 1.3s ease-in-out forwards;
 }
 
 .box:before {
@@ -29,8 +30,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.7;
-  background: #7f00efw;
+  opacity: 0.6;
+  background: #7f00ef;
   filter: blur(150px);
 }
 
@@ -61,15 +62,15 @@
 }
 
 .blink {
-  animation: blink 3s ease-in-out 0s infinite;
+  animation: blink 3s ease-in-out 1.3s infinite;
 }
 
 .blink1 {
-  animation: blink1 2s ease-in-out 0.5s infinite alternate;
+  animation: blink1 2s ease-in-out 1.8s infinite alternate;
 }
 
 .blink2 {
-  animation: blink 5s ease-in-out 0.9s infinite;
+  animation: blink 5s ease-in-out 2.2s infinite;
 }
 
 .off {
@@ -116,7 +117,7 @@
   85.999%,
   96%,
   100% {
-    opacity: 0.6;
+    opacity: 0.9;
   }
 }
 
@@ -126,7 +127,7 @@
   61%,
   85.999%,
   95% {
-    opacity: 0.3;
+    opacity: 0.1;
   }
   16%,
   19%,
@@ -134,7 +135,7 @@
   86%,
   93%,
   100% {
-    opacity: 0.8;
+    opacity: 1;
   }
 }
 
@@ -152,16 +153,34 @@
   86%,
   93%,
   100% {
-    opacity: 0.4;
+    opacity: 0.2;
   }
 }
 
 @keyframes neon2 {
-  from {
+  0%,
+  2%,
+  5%,
+  7%,
+  16%,
+  24%,
+  30%,
+  32%,
+  36% {
+    text-shadow: none;
+  }
+  8%,
+  15%,
+  25%,
+  29%,
+  31%,
+  34%,
+  45% {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #004da0,
       0 0 35px #004da0, 0 0 40px #004da0, 0 0 50px #004da0, 0 0 75px #004da0;
   }
-  to {
+
+  100% {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #004da0,
       0 0 35px #004da0, 0 0 40px #004da0, 0 0 50px #004da0, 0 0 75px #004da0;
   }

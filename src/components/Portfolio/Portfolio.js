@@ -1,8 +1,14 @@
 import React from 'react';
+import posed from 'react-pose';
 import '../../styles/portfolio.css';
 
+const PortfolioContainer = posed.div({
+  enter: { opacity: 1 },
+  exit: { opacity: 0 },
+});
+
 const Portfolio = () => (
-  <div className="portfolio-wrapper">
+  <PortfolioContainer className="portfolio-wrapper">
     <div className="neon">
       <div className="box">
         C<span className="blink">o</span>
@@ -16,7 +22,7 @@ const Portfolio = () => (
         <span className="loading-dots loading-dots-3" />
       </div>
     </div>
-  </div>
+  </PortfolioContainer>
 );
 
 export default Portfolio;

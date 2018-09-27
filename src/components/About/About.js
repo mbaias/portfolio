@@ -31,7 +31,6 @@ const H3 = posed.div({
       type: 'spring',
       stiffness: 100,
       damping: 40,
-      delay: 200,
     },
   },
 });
@@ -120,7 +119,7 @@ class About extends Component {
   render() {
     const { frontEnd, backEnd, other } = this.state.skills;
     return (
-      <div className="about-wrapper">
+      <div className="about-container">
         <Section className="person-info">
           <h1 className="person-info__name">Baias Mametjanov</h1>
           <span className="person-info__details">21, Front-End Developer</span>

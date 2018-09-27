@@ -1,7 +1,7 @@
-.about-wrapper {
+.about-container {
   width: 80%;
-  margin: 20px auto 0;
-  padding: 30px;
+  margin: 0 auto;
+  padding: 50px 30px 0;
   overflow-x: hidden;
 }
 
