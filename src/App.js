@@ -24,6 +24,14 @@ const RoutesContainer = posed.div({
   },
 });
 
+const ID = () =>
+  // Math.random should be unique because of its seeding algorithm.
+  // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+  // after the decimal.
+  `_${Math.random()
+    .toString(36)
+    .substr(2, 9)}`;
+
 class App extends Component {
   render() {
     const { location } = this.props;
@@ -57,7 +65,7 @@ class App extends Component {
           </span>
           <PageCounter path={path} />
           <PoseGroup>
-            <RoutesContainer className="routes-container" key={key}>
+            <RoutesContainer className="routes-container" key={ID()}>
               <Switch location={location}>
                 <Route exact path="/about" component={About} />
                 <Route exact path="/portfolio" component={Portfolio} />

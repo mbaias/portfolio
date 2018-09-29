@@ -19,7 +19,7 @@
   font-family: "Monoton", cursive;
   letter-spacing: 10px;
   color: #7f00ef;
-  animation: neon2 4s 1.3s ease-in-out forwards;
+  animation: neon2 2s 1s ease-in-out forwards;
 }
 
 .box:before {
@@ -31,8 +31,6 @@
   width: 100%;
   height: 100%;
   opacity: 0.6;
-  background: #7f00ef;
-  filter: blur(150px);
 }
 
 .loading-dots {
@@ -62,15 +60,15 @@
 }
 
 .blink {
-  animation: blink 3s ease-in-out 1.3s infinite;
+  animation: blink 3s ease-in-out 4s infinite;
 }
 
 .blink1 {
-  animation: blink1 2s ease-in-out 1.8s infinite alternate;
+  animation: blink1 2s ease-in-out 4.8s infinite alternate;
 }
 
 .blink2 {
-  animation: blink 5s ease-in-out 2.2s infinite;
+  animation: blink 5s ease-in-out 5.2s infinite;
 }
 
 .off {
@@ -175,11 +173,7 @@
   29%,
   31%,
   34%,
-  45% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #004da0,
-      0 0 35px #004da0, 0 0 40px #004da0, 0 0 50px #004da0, 0 0 75px #004da0;
-  }
-
+  45%,
   100% {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #004da0,
       0 0 35px #004da0, 0 0 40px #004da0, 0 0 50px #004da0, 0 0 75px #004da0;
