@@ -40,10 +40,10 @@ const Contacts = () => (
     </div>
     <form
       name="contact"
-      method="POST"
-      netlify
+      method="post"
       className="contacts-form"
-      action=""
+      action="/success"
+      netlify
     >
       <input type="hidden" name="form-name" value="contact" />
       <label className="contacts-form__label" htmlFor="name">

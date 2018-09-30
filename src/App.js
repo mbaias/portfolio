@@ -11,6 +11,7 @@ import PageCounter from './PageCounter';
 import About from './components/About/About';
 import Portfolio from './components/Portfolio/Portfolio';
 import Contacts from './components/Contacts/Contacts';
+import Success from './Success';
 
 // Posed animation
 const RoutesContainer = posed.div({
@@ -70,6 +71,7 @@ class App extends Component {
                 <Route exact path="/about" component={About} />
                 <Route exact path="/portfolio" component={Portfolio} />
                 <Route exact path="/contacts" component={Contacts} />
+                <Route exact path="/success" component={Success} />
               </Switch>
             </RoutesContainer>
           </PoseGroup>
