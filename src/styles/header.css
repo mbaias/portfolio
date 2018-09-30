@@ -42,7 +42,7 @@
   top: 0;
   bottom: 0;
   background: #fff;
-  animation: personOverlay 1s ease-in-out;
+  animation: personOverlay 1.1s ease-in-out;
 }
 
 .person-overlay--delayed {
@@ -69,16 +69,10 @@
     right: auto;
     width: 0;
   }
-  45% {
-    width: 100%;
-  }
-  50% {
-    width: 100%;
-  }
+  50%,
   65% {
     width: 100%;
   }
-
   100% {
     left: initial;
     right: 0;
