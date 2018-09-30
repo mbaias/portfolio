@@ -91,6 +91,7 @@ a:active {
   /* padding: 30px; */
   position: relative;
   z-index: 10;
+  overflow: hidden;
 }
 
 .routes-container {
