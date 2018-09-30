@@ -9,7 +9,7 @@ const ContactsContainer = posed.div({
     transition: { type: 'spring', stiffness: 50, damping: 10 },
   },
   exit: {
-    x: '-100%',
+    x: '100%',
     opacity: 0,
     transition: { type: 'spring', stiffness: 100 },
   },
