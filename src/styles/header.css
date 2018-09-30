@@ -21,8 +21,7 @@
   padding: 0 15px;
   color: rgba(255, 255, 255, 90%);
   background: rgb(124, 123, 123);
-  animation: nameDisplay 0.1s 0.6s ease-out forwards;
-  visibility: hidden;
+  animation: nameDisplay 1s ease-out forwards;
 }
 
 .person__job-title {
@@ -34,8 +33,7 @@
 }
 
 .person__job-title__text {
-  animation: nameDisplay 0.1s 0.8s ease-out forwards;
-  visibility: hidden;
+  animation: nameDisplay 1s ease-out forwards;
 }
 
 .person-overlay {
@@ -56,7 +54,8 @@
 }
 
 @keyframes nameDisplay {
-  0% {
+  0%,
+  70% {
     visibility: hidden;
   }
   100% {
@@ -76,9 +75,10 @@
   50% {
     width: 100%;
   }
-  75% {
+  65% {
     width: 100%;
   }
+
   100% {
     left: initial;
     right: 0;
