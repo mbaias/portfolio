@@ -38,7 +38,7 @@ const Contacts = () => (
         <span className="contacts-list__text">github.com/mbaias</span>
       </a>
     </div>
-    <form action="" className="contacts-form">
+    <form name="contact" method="POST" netlify className="contacts-form">
       <label className="contacts-form__label" htmlFor="name">
         <input
           type="text"
@@ -57,6 +57,7 @@ const Contacts = () => (
           className="contacts-form__input"
         />
       </label>
+      <div data-netlify-recaptcha />
       {/* eslint-disable-next-line */}
         <label htmlFor="message" className="contacts-form__label" />
       <textarea
