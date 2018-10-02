@@ -44,12 +44,16 @@ class App extends Component {
           ? 'background__overlay background__overlay--fluid'
           : 'background__overlay background__overlay--partial';
 
+    const pageSideContentClass =
+      path === '/'
+        ? 'page-side-content page-side-content--main'
+        : 'page-side-content';
+
     return (
       <div className="wrapper">
-        <div className="background">
-          <div className={backgroundOverlayClass} />
-        </div>
-        <div className="page-side-content">
+        <div className="background" />
+        <div className={backgroundOverlayClass} />
+        <div className={pageSideContentClass}>
           <Header path={path} />
           <Navbar path={path} />
         </div>
