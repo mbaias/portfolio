@@ -22,43 +22,45 @@ const Skill = ({ skill, i }) => {
   return (
     <React.Fragment>
       <div className="skill">
-        <svg className="skill__progress" width="50" height="50">
-          <g>
-            <circle
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="rgba(14, 19, 25, 0.3)"
-              fill="none"
-              strokeWidth="6"
-            />
-            <text
-              x="50%"
-              y="50%"
-              textAnchor="middle"
-              dominantBaseline="central"
-            >
-              {progress}
-            </text>
-            <Circle
-              initialPose="init"
-              pose="origin"
-              key={i}
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="rgba(14, 19, 25, 0.6)"
-              fill="none"
-              strokeWidth="6"
-              strokeDasharray="125.6"
-              transform="rotate(-90 25 25)"
-              poseKey={progressValue}
-              i={i}
-              progressValue={progressValue}
-            />
-          </g>
-        </svg>
-        <span className="skill__name">{skill.name}</span>
+        <div className="skill__icon">
+          <svg className="skill__progress" viewBox="0 0 50 50">
+            <g>
+              <circle
+                cx="25"
+                cy="25"
+                r="20"
+                stroke="rgba(14, 19, 25, 0.3)"
+                fill="none"
+                strokeWidth="6"
+              />
+              <text
+                x="50%"
+                y="50%"
+                textAnchor="middle"
+                dominantBaseline="central"
+              >
+                {progress}
+              </text>
+              <Circle
+                initialPose="init"
+                pose="origin"
+                key={i}
+                cx="25"
+                cy="25"
+                r="20"
+                stroke="rgba(14, 19, 25, 0.6)"
+                fill="none"
+                strokeWidth="6"
+                strokeDasharray="125.6"
+                transform="rotate(-90 25 25)"
+                poseKey={progressValue}
+                i={i}
+                progressValue={progressValue}
+              />
+            </g>
+          </svg>
+        </div>
+        <strong className="skill__name">{skill.name}</strong>
       </div>
     </React.Fragment>
   );

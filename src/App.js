@@ -11,10 +11,9 @@ import PageCounter from './PageCounter';
 import About from './components/About/About';
 import Portfolio from './components/Portfolio/Portfolio';
 import Contacts from './components/Contacts/Contacts';
-import Success from './Success';
 
 // Posed animation
-const RoutesContainer = posed.div({
+const RouteContainer = posed.div({
   enter: {
     opacity: 1,
     delay: 300,
@@ -54,7 +53,7 @@ class App extends Component {
           <Header path={path} />
           <Navbar path={path} />
         </div>
-        <main className="secondary-content-wrapper">
+        <main className="page-main-content">
           <span
             className={
               path === '/portfolio'
@@ -66,14 +65,23 @@ class App extends Component {
           </span>
           <PageCounter path={path} />
           <PoseGroup>
-            <RoutesContainer className="routes-container" key={ID()}>
+            <RouteContainer className="routes-container" key={key}>
               <Switch location={location}>
-                <Route exact path="/about" component={About} />
-                <Route exact path="/portfolio" component={Portfolio} />
-                <Route exact path="/contacts" component={Contacts} />
-                <Route exact path="/success" component={Success} />
+                <Route exact path="/about" component={About} key="about" />
+                <Route
+                  exact
+                  path="/portfolio"
+                  component={Portfolio}
+                  key="portfolio"
+                />
+                <Route
+                  exact
+                  path="/contacts"
+                  component={Contacts}
+                  key="contacts"
+                />
               </Switch>
-            </RoutesContainer>
+            </RouteContainer>
           </PoseGroup>
         </main>
       </div>

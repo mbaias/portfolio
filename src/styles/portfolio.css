@@ -11,11 +11,11 @@
   padding: 30px 60px;
   width: 60%;
   animation: neon3 4s 2s ease-in-out infinite alternate-reverse;
+  font-size: calc(14px + 26 * ((100vw - 320px) / 680));
 }
 
 .box {
   position: relative;
-  font-size: 5em;
   font-family: "Monoton", cursive;
   letter-spacing: 10px;
   color: #7f00ef;

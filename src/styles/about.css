@@ -35,6 +35,8 @@
   border-bottom: 2px solid #7f00ef;
   border-right: 2px solid #7f00ef;
   letter-spacing: 2px;
+  line-height: 150%;
+  font-size: 18px;
 }
 
 .person-info__profile:after {
@@ -111,10 +113,15 @@
   margin-bottom: 20px;
 }
 
+.skill__icon {
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+}
+
 .skill__name {
   margin-left: 10px;
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-size: 16px;
   letter-spacing: 1px;
   color: var(--primary-color-1-variant);
 }
