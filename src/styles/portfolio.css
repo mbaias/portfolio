@@ -245,3 +245,24 @@
     height: 7px;
   }
 }
+
+@media (max-width: 850px) {
+  .portfolio-wrapper {
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .neon {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .neon {
+    font-size: 22px;
+    padding-left: 15px;
+  }
+}
