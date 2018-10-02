@@ -206,8 +206,12 @@ a:active {
     position: absolute;
   }
 
+  .page-side-content--main .header--moved {
+    position: absolute;
+  }
+
   .page-side-content--main .navbar__link {
-    font-size: 32px;
+    font-size: 28px;
     color: var(--primary-color-2-variant);
   }
 
@@ -220,6 +224,6 @@ a:active {
   }
 
   .page-side-content--main .nav--moved {
-    transform: translate3d(-80%, 50%, 0);
+    transform: translate3d(-85%, 50%, 0);
   }
 }
