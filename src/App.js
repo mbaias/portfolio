@@ -71,7 +71,7 @@ class App extends Component {
         </div>
         {path !== '/' ? (
           <Link to="/" className="menu-icon">
-            <img src="../public/menu.svg" alt="menu" />
+            <img src="./menu.svg" alt="menu" />
           </Link>
         ) : (
           <button
@@ -80,7 +80,7 @@ class App extends Component {
             onClick={ this.props.history.goBack}
             className="menu-icon"
           >
-            <img src="../public/menu.svg" alt="menu" />
+            <img src="./menu.svg" alt="menu" />
           </button>
         )}
         <main className="page-main-content">

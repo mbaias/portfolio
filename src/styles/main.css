@@ -202,6 +202,10 @@ a:active {
     transform: translate3d(0, 0, 0);
   }
 
+  .page-side-content--main .nav--moved {
+    position: absolute;
+  }
+
   .page-side-content--main .navbar__link {
     font-size: 32px;
     color: var(--primary-color-2-variant);
