@@ -102,3 +102,37 @@ textarea.contacts-form__input {
   background: var(--primary-color-2-variant);
   color: var(--primary-color-1);
 }
+
+/* Media Queries */
+
+@media (max-width: 1300px) {
+  .contacts-container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .contacts-list {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .contacts-form__button {
+    width: 60%;
+  }
+
+  .contacts-list__email,
+  .contacts-list__phone {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 910px) {
+  .contacts-list {
+    width: 100%;
+  }
+
+  .contacts-form {
+    width: 100%;
+  }
+}

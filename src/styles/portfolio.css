@@ -76,6 +76,10 @@
   animation: off 3s ease-in-out forwards 2s 1;
 }
 
+/* ANIMATIONS */
+
+/* Dots animation */
+
 @keyframes loadingDots {
   0% {
     opacity: 0.2;
@@ -180,6 +184,8 @@
   }
 }
 
+/* Border animations */
+
 @keyframes neon3 {
   0%,
   15.999%,
@@ -199,5 +205,43 @@
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #004da0,
       0 0 35px #004da0, 0 0 40px #004da0, 0 0 50px #004da0, 0 0 75px #004da0;
     border: 5px solid #004da0;
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 1300px) {
+  .portfolio-wrapper {
+    padding-left: 50px;
+  }
+
+  .loading-dots {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .loading-dots {
+    margin-right: 10px;
+  }
+
+  .loading-dots-1 {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 910px) {
+  .neon {
+    padding: 15px 30px;
+  }
+
+  .loading-dots-1 {
+    margin-left: 0px;
+  }
+
+  .loading-dots {
+    width: 7px;
+    height: 7px;
   }
 }

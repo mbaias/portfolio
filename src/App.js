@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { hot } from 'react-hot-loader';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter, Link } from 'react-router-dom';
 import posed, { PoseGroup } from 'react-pose';
 
 // Components
@@ -33,6 +33,18 @@ const ID = () =>
     .substr(2, 9)}`;
 
 class App extends Component {
+  toggleMenu = () => {
+    document
+      .getElementsByClassName('page-side-content')[0]
+      .classList.toggle('shown');
+    document
+      .getElementsByClassName('background__overlay')[0]
+      .classList.toggle('shown');
+    // document
+    //   .getElementsByClassName('page-side-content')[0]
+    //   .classList.toggle('shown');
+  };
+
   render() {
     const { location } = this.props;
     const { pathname: path, key } = location;
@@ -57,6 +69,20 @@ class App extends Component {
           <Header path={path} />
           <Navbar path={path} />
         </div>
+        {path !== '/' ? (
+          <Link to="/" className="menu-icon">
+            <img src="../public/menu.svg" alt="menu" />
+          </Link>
+        ) : (
+          <button
+            type="submit"
+            // eslint-disable-next-line
+            onClick={ this.props.history.goBack}
+            className="menu-icon"
+          >
+            <img src="../public/menu.svg" alt="menu" />
+          </button>
+        )}
         <main className="page-main-content">
           <span
             className={
@@ -69,7 +95,7 @@ class App extends Component {
           </span>
           <PageCounter path={path} />
           <PoseGroup>
-            <RouteContainer className="routes-container" key={key}>
+            <RouteContainer className="routes-container" key={ID()}>
               <Switch location={location}>
                 <Route exact path="/about" component={About} key="about" />
                 <Route

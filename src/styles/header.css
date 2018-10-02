@@ -53,6 +53,8 @@
   color: var(--primary-color-1);
 }
 
+/* Overlay Animation */
+
 @keyframes nameDisplay {
   0%,
   70% {
@@ -77,5 +79,33 @@
     left: initial;
     right: 0;
     width: 0;
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 850px) {
+  .person__job-title {
+    font-size: 18px;
+  }
+
+  .person__name {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .header--moved {
+    transform: translate3d(-40%, -50%, 0);
+  }
+}
+
+@media (max-width: 600px) {
+  .person__name {
+    font-size: 20px;
+  }
+
+  .person__job-title {
+    font-size: 14px;
   }
 }

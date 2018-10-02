@@ -83,7 +83,7 @@ a:active {
   padding: 40px 0 30px 30px;
   z-index: 20;
   position: absolute;
-  transition: transform 1s ease-out;
+  transition: 1s ease-out;
 }
 
 .page-main-content {
@@ -129,22 +129,17 @@ a:active {
   background: var(--primary-color-2-variant);
 }
 
-@media (max-width: 1300px) {
-  .portfolio-wrapper {
-    padding-left: 50px;
-  }
-  .loading-dots {
-    width: 10px;
-    height: 10px;
-  }
-
-  .person-info__profile {
-    width: 100%;
-  }
-
-  .contacts-container {
-    width: 75%;
-  }
+.menu-icon {
+  width: 46px;
+  height: 32px;
+  position: absolute;
+  background: none;
+  border: none;
+  right: 30px;
+  top: 10px;
+  z-index: 20;
+  display: none;
+  padding: 0;
 }
 
 @media (max-width: 1150px) {
@@ -160,70 +155,44 @@ a:active {
     margin-left: 25%;
   }
 
-  .about-container {
-    width: 90%;
-    margin: 0;
-    padding-left: 50px;
-  }
-
-  .person-info__profile {
-    width: 100%;
-    font-size: 16px;
-  }
-
-  .loading-dots {
-    margin-right: 10px;
-  }
-
-  .loading-dots-1 {
-    margin-left: 5px;
-  }
-
   .page-name:after {
     width: 30px;
   }
+}
 
-  .skill__icon {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
+@media (max-width: 850px) {
+  .page-side-content {
+    transform: translate3d(-100%, 0, 0);
+    transition: 1s ease-out;
+    background: none;
+    width: 100%;
   }
 
-  .contacts-list {
-    font-size: 14px;
-    margin-bottom: 40px;
+  .page-side-content--main {
+    width: 100%;
+    transform: none;
   }
-  .contacts-form__button {
-    width: 60%;
+
+  .page-main-content {
+    margin-left: 0;
   }
-  .contacts-list__email,
-  .contacts-list__phone {
-    margin-bottom: 20px;
+
+  .background__overlay--partial {
+    transform: translate3d(-100%, 0, 0);
+    z-index: 15;
+  }
+
+  .menu-icon {
+    display: block;
   }
 }
 
-@media (max-width: 910px) {
-  .neon {
-    padding: 15px 30px;
+@media (max-width: 700px) {
+  .page-name {
+    display: none;
   }
 
-  .loading-dots-1 {
-    margin-left: 0px;
-  }
-  .loading-dots {
-    width: 7px;
-    height: 7px;
-  }
-  .skill__icon {
-    width: 35px;
-    height: 35px;
-  }
-
-  .contacts-list {
-    width: 100%;
-  }
-
-  .contacts-form {
-    width: 100%;
+  .page-counter {
+    display: none;
   }
 }

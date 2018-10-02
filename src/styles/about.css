@@ -125,3 +125,36 @@
   letter-spacing: 1px;
   color: var(--primary-color-1-variant);
 }
+
+/* Media Queries */
+
+@media (max-width: 1300px) {
+  .person-info__profile {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .about-container {
+    width: 90%;
+    margin: 0;
+    padding-left: 50px;
+  }
+
+  .person-info__profile {
+    width: 100%;
+    font-size: 16px;
+  }
+  .skill__icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 910px) {
+  .skill__icon {
+    width: 35px;
+    height: 35px;
+  }
+}

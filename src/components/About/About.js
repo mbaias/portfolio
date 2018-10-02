@@ -69,25 +69,25 @@ class About extends Component {
           },
           {
             name: 'JavaScript/ES6/ES7/ES8',
-            progress: 80,
+            progress: 75,
           },
           {
             name: 'React/Redux',
-            progress: 80,
+            progress: 70,
           },
         ],
         backEnd: [
           {
             name: 'Django',
-            progress: 60,
+            progress: 50,
           },
           {
             name: 'Python 3',
-            progress: 60,
+            progress: 50,
           },
           {
             name: 'MySQL/MongoDB',
-            progress: 70,
+            progress: 60,
           },
         ],
         other: [
