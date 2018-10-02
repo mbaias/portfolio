@@ -204,10 +204,12 @@ a:active {
 
   .page-side-content--main .nav--moved {
     position: absolute;
+    bottom: 45% !important;
   }
 
   .page-side-content--main .header--moved {
     position: absolute;
+    top: 20% !important;
   }
 
   .page-side-content--main .navbar__link {
