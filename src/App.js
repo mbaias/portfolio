@@ -51,7 +51,7 @@ class App extends Component {
     const backgroundOverlayClass =
       // eslint-disable-next-line
       path === '/'
-        ? 'background__overlay'
+        ? 'background__overlay background__overlay--main'
         : path === '/portfolio'
           ? 'background__overlay background__overlay--fluid'
           : 'background__overlay background__overlay--partial';

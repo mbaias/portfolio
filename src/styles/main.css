@@ -196,3 +196,26 @@ a:active {
     display: none;
   }
 }
+
+@media (max-width: 450px) {
+  .background__overlay--main {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .page-side-content--main .navbar__link {
+    font-size: 32px;
+    color: var(--primary-color-2-variant);
+  }
+
+  .page-side-content--main .navbar__link:after {
+    background: var(--primary-color-2-variant);
+  }
+
+  .page-side-content--main .navbar__counter {
+    color: var(--primary-color-2-variant);
+  }
+
+  .page-side-content--main .nav--moved {
+    transform: translate3d(-80%, 50%, 0);
+  }
+}

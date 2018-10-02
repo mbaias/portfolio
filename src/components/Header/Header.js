@@ -34,7 +34,14 @@ const Header = ({ path }) => {
         <h1 className="person__name">
           <span className="person-overlay" />
           {path === '/' ? (
-            <span className="person__name__text">BAIAS MAMETJANOV</span>
+            <React.Fragment>
+              <span className="person__name__text person__name__text--long">
+                BAIAS MAMETJANOV
+              </span>
+              <span className="person__name__text person__name__text--short">
+                BAIAS M.
+              </span>
+            </React.Fragment>
           ) : (
             <span className="person__name__text">BAIAS M.</span>
           )}

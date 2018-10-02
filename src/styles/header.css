@@ -53,6 +53,10 @@
   color: var(--primary-color-1);
 }
 
+.person__name__text--short {
+  display: none;
+}
+
 /* Overlay Animation */
 
 @keyframes nameDisplay {
@@ -101,11 +105,28 @@
 }
 
 @media (max-width: 600px) {
-  .person__name {
-    font-size: 20px;
+  .header--moved {
+    transform: translate3d(-60%, -50%, 0);
   }
 
+  .person__name__text--long {
+    display: none;
+  }
+
+  .person__name__text--short {
+    display: block;
+  }
   .person__job-title {
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  .person__name {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header--moved {
+    transform: translate3d(-40%, -50%, 0);
   }
 }
