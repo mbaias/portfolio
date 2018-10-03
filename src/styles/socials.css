@@ -1,5 +1,5 @@
 .footer {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 30px;
   transform: translateY(-50%);
@@ -51,7 +51,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 910px) {
+@media (max-width: 850px) {
   .footer {
     top: 95%;
     left: 20%;
