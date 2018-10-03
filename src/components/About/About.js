@@ -132,12 +132,18 @@ class About extends Component {
             Electronics Engineering. <br /> I love watching how pieces of code
             can create beautiful and interactive web apps, whether they are
             simple and elegant or extravagant and dynamic. I specialize in
-            applications written in React but I’m becoming a big fan of Vue.js.
-            Having a small experience in Back-end development such as Ruby on
-            Rails and Django (1.11, 2.0) I have a solid understanding of network
-            and database structure, whether it is SQL or NoSQL. <br /> P.S. I’m
-            slowly starting to become TDD approach adept to bulletproof my
-            future projects. <br /> P.S.S. Love movies, anime and traveling.
+            applications written in <strong className="highlight">React</strong>{' '}
+            but I’m becoming a big fan of{' '}
+            <strong className="highlight">Vue.js</strong>. Having a small
+            experience in Back-end development such as{' '}
+            <strong className="highlight">Ruby on Rails</strong> and{' '}
+            <strong className="highlight">Django</strong> I have a solid
+            understanding of network and database structure, whether it is{' '}
+            <strong className="highlight">SQL</strong> or{' '}
+            <strong className="highlight">NoSQL</strong>. <br /> P.S. I’m slowly
+            starting to become <strong className="highlight">TDD</strong>{' '}
+            approach adept to bulletproof my future projects. <br /> P.S.S. Love
+            movies, anime and traveling.
           </p>
         </Section>
         <Article className="skills">

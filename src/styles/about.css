@@ -62,6 +62,10 @@
   background: #7f00ef;
 }
 
+.highlight {
+  color: #7f00ef;
+}
+
 .skills-column {
   width: 100%;
   display: flex;
