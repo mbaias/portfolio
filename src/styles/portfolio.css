@@ -262,7 +262,8 @@
 
 @media (max-width: 450px) {
   .neon {
-    font-size: 22px;
+    width: 75%;
+    font-size: 26px;
     padding-left: 15px;
   }
 }

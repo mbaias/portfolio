@@ -1,7 +1,7 @@
 .about-container {
   width: 80%;
   margin: 0 auto;
-  padding: 50px 30px 0;
+  padding: 60px 30px 0;
   overflow-x: hidden;
 }
 
@@ -156,5 +156,25 @@
   .skill__icon {
     width: 35px;
     height: 35px;
+  }
+}
+
+@media (max-width: 450px) {
+  .about-container {
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 0;
+  }
+
+  .person-info__profile {
+    padding-right: 10px;
+  }
+
+  .person-info__name {
+    font-size: 24px;
+  }
+
+  .person-info__details {
+    font-size: 14px;
   }
 }
