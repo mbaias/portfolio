@@ -21,7 +21,14 @@
   padding: 0 15px;
   color: rgba(255, 255, 255, 90%);
   background: rgb(124, 123, 123);
-  animation: nameDisplay 1s ease-out forwards;
+}
+
+.person__name__text--long {
+  animation: none;
+}
+
+.person__name__text--short {
+  animation: none;
 }
 
 .person__job-title {

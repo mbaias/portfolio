@@ -75,6 +75,10 @@ class About extends Component {
             name: 'React/Redux',
             progress: 70,
           },
+          {
+            name: 'TDD',
+            progress: 40,
+          },
         ],
         backEnd: [
           {
@@ -122,15 +126,18 @@ class About extends Component {
       <div className="about-container">
         <Section className="person-info">
           <h1 className="person-info__name">Baias Mametjanov</h1>
-          <span className="person-info__details">21, Front-End Developer</span>
+          <span className="person-info__details">21, Front-end Developer</span>
           <p className="person-info__profile">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
-            aut perspiciatis fugit sunt facilis nisi ad. Quod, accusamus quam
-            modi eius quos, nostrum mollitia excepturi autem totam dicta
-            voluptatum tempore? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Totam illo soluta facilis provident voluptas
-            autem, veniam ullam. Quia ipsa dicta illum, natus, iure voluptatibus
-            numquam perspiciatis amet voluptate eum ab.
+            Hey, I’m a self-taught Front-End Developer with a background in
+            Electronics Engineering. <br /> I love watching how pieces of code
+            can create beautiful and interactive web apps, whether they are
+            simple and elegant or extravagant and dynamic. I specialize in
+            applications written in React but I’m becoming a big fan of Vue.js.
+            Having a small experience in Back-end development such as Ruby on
+            Rails and Django (1.11, 2.0) I have a solid understanding of network
+            and database structure, whether it is SQL or NoSQL. <br /> P.S. I’m
+            slowly starting to become TDD approach adept to bulletproof my
+            future projects. <br /> P.S.S. Love movies, anime and traveling.
           </p>
         </Section>
         <Article className="skills">

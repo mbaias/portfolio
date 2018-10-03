@@ -11,6 +11,7 @@ import PageCounter from './PageCounter';
 import About from './components/About/About';
 import Portfolio from './components/Portfolio/Portfolio';
 import Contacts from './components/Contacts/Contacts';
+import Socials from './components/Socials/Socials';
 
 // Posed animation
 const RouteContainer = posed.div({
@@ -33,20 +34,8 @@ const ID = () =>
     .substr(2, 9)}`;
 
 class App extends Component {
-  toggleMenu = () => {
-    document
-      .getElementsByClassName('page-side-content')[0]
-      .classList.toggle('shown');
-    document
-      .getElementsByClassName('background__overlay')[0]
-      .classList.toggle('shown');
-    // document
-    //   .getElementsByClassName('page-side-content')[0]
-    //   .classList.toggle('shown');
-  };
-
   render() {
-    const { location } = this.props;
+    const { location, history } = this.props;
     const { pathname: path, key } = location;
     const backgroundOverlayClass =
       // eslint-disable-next-line
@@ -68,18 +57,14 @@ class App extends Component {
         <div className={pageSideContentClass}>
           <Header path={path} />
           <Navbar path={path} />
+          <Socials />
         </div>
         {path !== '/' ? (
           <Link to="/" className="menu-icon">
             <img src="./menu.svg" alt="menu" />
           </Link>
         ) : (
-          <button
-            type="submit"
-            // eslint-disable-next-line
-            onClick={ this.props.history.goBack}
-            className="menu-icon"
-          >
+          <button type="submit" onClick={history.goBack} className="menu-icon">
             <img src="./menu.svg" alt="menu" />
           </button>
         )}
@@ -121,6 +106,7 @@ class App extends Component {
 
 App.propTypes = {
   location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
 };
 
 export default withRouter(hot(module)(App));

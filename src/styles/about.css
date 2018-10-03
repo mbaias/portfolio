@@ -1,7 +1,7 @@
 .about-container {
   width: 80%;
   margin: 0 auto;
-  padding: 60px 30px 0;
+  padding: 60px 30px 50px;
   overflow-x: hidden;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .person-info__profile {
-  width: 80%;
+  width: 100%;
   color: #2a323dda;
   text-align: left;
   position: relative;
@@ -35,7 +35,7 @@
   border-bottom: 2px solid #7f00ef;
   border-right: 2px solid #7f00ef;
   letter-spacing: 2px;
-  line-height: 150%;
+  line-height: 200%;
   font-size: 18px;
 }
 
