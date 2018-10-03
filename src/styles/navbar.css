@@ -28,7 +28,7 @@
   position: relative;
   margin-left: 20px;
   font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-  transition: color 1.6s;
+  transition: color 1.6s, font-size 1.6s;
 }
 
 .navbar__link:after {
